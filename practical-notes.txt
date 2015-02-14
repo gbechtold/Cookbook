@@ -7,7 +7,6 @@ $ alias tw='open -a /Applications/TextWrangler.app'
 $ tw myfile.txt
 
 
-
 ## Git: Rename inside Git
 ### Rename Files
 Altering names outside git causes problems. 

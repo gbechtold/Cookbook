@@ -11,5 +11,9 @@ echo 'Hello ' . $name . '! </br></br>';
 /* and the first char */
 echo 'Your first Character is '.substr($name,1,1).'</br>';
 
-/* and the last char */
+/* and the last char using substr*/
+echo 'Your last Character is '.substr($name,-1,1).'</br>';
+
+/* and the last char by counting the characters manually*/
 echo 'Your last Character is '.substr($name,$stringl,1);
+

@@ -1,0 +1,19 @@
+#Practical Notes
+
+## Terminal
+
+### Mac: Opening Files from terminal: Create a basic alias for Textwranger:
+$ alias tw='open -a /Applications/TextWrangler.app'
+$ tw myfile.txt
+
+
+
+## Git: Rename inside Git
+### Rename Files
+Altering names outside git causes problems. 
+'git mv' <options>... <args>...
+see more: 
+http://git-scm.com/docs/git-mv
+
+### Dry Run
+Use "git <command> --dry-run" , or the short version "-n" to try out things

@@ -13,4 +13,5 @@ Version:
 - 1.0 Intial Commit
 
 [twitter @guntrambechtold](www.twitter.com/guntrambechtold/)
-[Stay in touch](www.starsmedia.com)
+
+or stay in touch via [web](www.starsmedia.com)

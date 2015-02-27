@@ -10,7 +10,4 @@ echo exp($n);
 echo pow($n, 3)."</br>";
 
 $m = pow($n, 3);
-print number_format($m, 2);
-
-$u = 4;
-print "Your search retruned $number "
+print number_format($m, 1, '_', '-');

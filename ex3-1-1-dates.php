@@ -10,5 +10,5 @@ $now_2 = localtime();
 print "$now_1[hours]:$now_1[minutes]:$now_1[seconds]".'</br>	';
 print "$now_2[2]:$now_2[1]:$now_2[0]".'</br>';
 
-echo gmmktime().'</br>';
+echo gmmktime().' gmmktime</br>';
 echo mktime().'</br>';

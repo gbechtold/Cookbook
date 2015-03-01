@@ -17,3 +17,5 @@ $time_parts = getdate(163727100);
 foreach($time_parts as $timepart => $n){
 	echo $n.'</br>';
 };
+
+echo strftime('%c');

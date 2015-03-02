@@ -33,3 +33,19 @@ $yr = '1';
 
 echo pc_mktime(1,1,1,1,1,1,1).'</br>';
 print_r(getdate($a));
+
+
+class Myklasse {
+	function ausgabe1() {
+		echo "1";
+	}
+
+	function ausgabe2() {
+		echo "2";
+	}
+}
+
+New Myklasse();
+
+// das ist meine klasse
+Myklasse::ausgabe2();

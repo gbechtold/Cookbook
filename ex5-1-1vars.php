@@ -4,8 +4,11 @@ $strikes = 0;
 $move = 'foul';
 pc_check_the_count('foul');
 
-
-
+$mycomplexstring = array("this is","my complex","string");
+$ser = serialize($mycomplexstring);
+print_r($ser)."</br>";
+$unser = unserialize($ser);
+print_r($unser);
 
 function pc_check_the_count($pitch) {
 	static $strikes = 0;

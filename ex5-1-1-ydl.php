@@ -16,11 +16,15 @@ echo '
 ';
 
 
+?>
+    <form action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> method="post">
+        Magazine url	: <input type="text" name="magazineurl"> <input type="submit">
+    </form>
+<?php
+
 if (!empty($_POST)): ?>
     Your Magazine is <?php 
     
-/* ----------------- http://serverfault.com/questions/66347/why-is-the-response-on-localhost-so-slow */
-
 $magazineurl = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -58,8 +62,20 @@ $string = file_get_contents($jsonfile);
 $json = json_decode($string, true);
 
 echo'<pre>';
+echo $json['document']['base_path'];
+
+foreach ($json['document']['pages'] as $key => $jsons) { // This will search in the 2 jsons
+     foreach($jsons as $key => $value) {
+			
+			echo $value['zoom'];
+            
+    }
+}
+
+echo '</br></br>';
 print_r($json);
 echo'</pre>';
+
 
 /*
 foreach ($json as $key => $value) {
@@ -77,11 +93,9 @@ foreach ($json as $key => $value) {
 	
 ?>
 
-<?php else: ?>
-    <form action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> method="post">
-        Magazine url	: <input type="text" name="magazineurl"> <input type="submit">
-    </form>
-<?php endif; 
+<?php else: 
+
+ endif; 
 
 echo '</body>';
 

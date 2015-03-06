@@ -8,7 +8,7 @@ $mycomplexstring = array("this is","my complex","string");
 $ser = serialize($mycomplexstring);
 print_r($ser)."</br>";
 $unser = unserialize($ser);
-print_r($unser);
+var_dump($unser);
 
 function pc_check_the_count($pitch) {
 	static $strikes = 0;

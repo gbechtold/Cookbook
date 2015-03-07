@@ -59,21 +59,25 @@ $string = file_get_contents($jsonfile);
 
 // https://images.yumpu.com/yumpu.com/000/046/850/808/1424272463_3792/zoom/o_19eek0utp1iqdke81b675j3000009.jpg?v=5280
 
-$json = json_decode($string, true);
+$document_json = json_decode($string, true);
 
 echo'<pre>';
-echo $json['document']['base_path'];
 
-foreach ($json['document']['pages'] as $key => $jsons) { // This will search in the 2 jsons
-     foreach($jsons as $key => $value) {
-			
-			echo $value['zoom'];
-            
-    }
-}
+echo 'Base Path: '.$document_json['document']['base_path'].'</br></br>';
+
+echo 'Images: </br>';
+foreach ($document_json['document']['pages'] as $pages => $page) {
+	 foreach ($page as $imgs) {
+			if(isset($imgs['zoom'])){
+			echo $imgs['zoom'].'</br>';
+			}
+		}	
+	}	
+
+
 
 echo '</br></br>';
-print_r($json);
+print_r($document_json);
 echo'</pre>';
 
 

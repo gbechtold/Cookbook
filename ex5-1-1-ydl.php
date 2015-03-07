@@ -45,62 +45,59 @@ else
 echo $url."<br>";
 echo basename($url)."<br>";
 $artefact1 = dirname($url);
-echo "<br>";
 $artefact2 = basename($artefact1);	
-echo "<br>";
-
 
 $jsonfile = 'https://www.yumpu.com/en/document/json/'.$artefact2;
-
 echo '<a href="'.$jsonfile.'">'.$jsonfile.'</a>';
 echo "<br>";
 
 $string = file_get_contents($jsonfile);
-
 // https://images.yumpu.com/yumpu.com/000/046/850/808/1424272463_3792/zoom/o_19eek0utp1iqdke81b675j3000009.jpg?v=5280
 
 $document_json = json_decode($string, true);
-
 echo'<pre>';
-
 echo 'Base Path: '.$document_json['document']['base_path'].'</br></br>';
+// echo 'Images: </br>';
+$img_list = array();
 
-echo 'Images: </br>';
 foreach ($document_json['document']['pages'] as $pages => $page) {
 	 foreach ($page as $imgs) {
 			if(isset($imgs['zoom'])){
-			echo $imgs['zoom'].'</br>';
+			$img_list[] = $imgs['zoom'];
 			}
 		}	
-	}	
-
+	}
+}		
+// print_r($img_list);
+// call zip download here
 
 
 echo '</br></br>';
-print_r($document_json);
+// print_r($document_json);
 echo'</pre>';
 
+endif;
 
-/*
-foreach ($json as $key => $value) {
-    if (!is_array($value)) {
-        echo $key . '=>' . $value . '<br />';
-    } else {
-        foreach ($value as $key => $val) {
-            echo $key . '=>' . $val . '<br />';
-        }
-    }
-}*/
+create_zip($img_list,'my-archive.zip');
 
+// zip download function
+
+function create_zip($files = array(), $destination = '', $overwrite = false) {
+ echo '<pre>';
+ echo $destination.'</br>';
+ print_r($files);
+ echo'</br>';
+ echo $overwrite.'</br>';
+ echo '</pre>';
+ echo 'create zip';
 }
 
-	
-?>
 
-<?php else: 
 
- endif; 
 
+
+ 
+//closing the document
 echo '</body>';
 
 

@@ -83,6 +83,8 @@ create_zip($img_list,'my-archive.zip');
 // zip download function
 
 function create_zip($files = array(), $destination = '', $overwrite = false) {
+ 
+ if(file_exists($destination) && !$overwrite) { return false; }
  echo '<pre>';
  echo $destination.'</br>';
  print_r($files);

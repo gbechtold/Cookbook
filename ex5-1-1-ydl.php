@@ -64,6 +64,9 @@ foreach ($document_json['document']['pages'] as $pages => $page) {
 	 foreach ($page as $imgs) {
 			if(isset($imgs['zoom'])){
 			$img_list[] = $imgs['zoom'];
+			
+			// override img_list
+			$img_list = array('001img.png');
 			}
 		}	
 	}
@@ -82,9 +85,42 @@ create_zip($img_list,'my-archive.zip');
 
 // zip download function
 
+
 function create_zip($files = array(), $destination = '', $overwrite = false) {
  
  if(file_exists($destination) && !$overwrite) { return false; }
+
+ $valid_files = array();
+ 
+ if (is_array($files)) {
+ 	foreach($files as $file) {
+ 		if(file_exists($file)) {
+ 			$valid_files[] = $file;
+ 		}
+ 	}
+ }
+ if(count($valid_files)) {
+	$zip = new ZipArchive();
+	if($zip->open($destination,$overwrite ? ZIPARCHIVE::OVERWRITE : ZIPARCHIVE::CREATE) !== true) {
+		return false;
+	}
+ 
+ 	foreach($valid_files as $file) {
+ 		$zip->addFile($file,$file);
+ 	}
+ 	echo 'the zip archive contains ',$zip->numFiles,' files with a status';
+	$zip->close();
+	return file_exists($destination);
+ 	
+ 	}
+ else
+ 	{
+ 	return false;
+ 	}
+ 
+
+ 
+
  echo '<pre>';
  echo $destination.'</br>';
  print_r($files);
@@ -92,7 +128,7 @@ function create_zip($files = array(), $destination = '', $overwrite = false) {
  echo $overwrite.'</br>';
  echo '</pre>';
  echo 'create zip';
-}
+ }
 
 
 

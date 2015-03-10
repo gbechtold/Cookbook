@@ -6,5 +6,10 @@ function wrap_html_tag($string, $tag = 'b') {
 }
 
 $string = 'I am some HTML';
+//$string = NULL;
 
+if (is_null($string)) {
+echo 'none';}
+else {
 echo wrap_html_tag($string, 'i');
+}

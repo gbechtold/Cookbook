@@ -22,18 +22,28 @@
 </script>
 
 <script type="text/javascript">
+
 var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-XXXXXXX-XX']);
+/* _gaq.push(['_setAccount', 'UA-XXXXXXX-XX']); */
 _gaq.push(['_setAllowAnchor', 'true']); // tell GA to read params from hash
 _gaq.push(['_trackPageview']);
 _gaq.push(function(){
     history.pushState("", document.title, window.location.pathname); // remove hash
 });
+	
 
-var campaign = "spring";
-var medium = "email";
-var source = "source";
-var content = "content";
+
+// get URL Parameter
+function getURLParameter(name) {
+  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+}
+
+// map URL Parameter to Analytics - Use these Keywords to map the parameters
+
+var campaign = getURLParameter('othersource');
+var medium = getURLParameter('othersource');
+var source = getURLParameter('othersource');
+var content = getURLParameter('othersource');
 
 // add params to hash, if some condition is true
 if (true) {

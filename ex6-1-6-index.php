@@ -4,7 +4,4 @@
 
 phpinfo();
 
-$user = 'mark';
-echo $user;
-
 ?>

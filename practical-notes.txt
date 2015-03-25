@@ -18,6 +18,13 @@ http://git-scm.com/docs/git-mv
 Use "git <command> --dry-run" , or the short version "-n" to try out things
 
 
+
+## Own Objects
+cd .git/objects
+ls -al
+sudo chown -R yourname:yourgroup *
+
+
 ### Note
 
 frank.librty Coworka-43

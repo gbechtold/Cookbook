@@ -5,7 +5,8 @@
     </head>
     <body>
         <div id = 'twitterFeed'></div>
-        <script>
+        
+        <!-- <script>
         function myCallback(dataWeGotViaJsonp){
             var text = '';
             var len = dataWeGotViaJsonp.length;
@@ -17,5 +18,7 @@
         }
         </script>
         <script type="text/javascript" src="http://twitter.com/status/user_timeline/padraicb.json?count=10&callback=myCallback"></script>
+ 	--!>
+ 	
     </body>
 </html>

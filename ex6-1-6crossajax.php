@@ -4,7 +4,7 @@
     <head>
     </head>
     <body>
-        <div id = 'twitterFeed'></div>
+        <div id = 'twitterFeed' class = 'twitterfeed'></div>
         
         <!-- <script>
         function myCallback(dataWeGotViaJsonp){

@@ -16,6 +16,7 @@ $sql = 'INSERT INTO userdata (fname, lname, comment)'.'VAlUES(Guntram, Bechtold,
 
 $sql = 'SELECT * FROM userdata ORDER BY fname, lname';
 $result = $database->query($sql);
-print_r($result);
+
+while ();
 
 echo "done";

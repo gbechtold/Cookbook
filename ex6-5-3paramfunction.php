@@ -13,6 +13,6 @@ function image($img) {
 $image = image(array('src' => 'cow.png', 'alt' => 'cows say moo'));
 echo $image;
 
-$image = image(array('src' => 'pig.jpeg', 'alt' => 'pig say oink'));
+$image = image(array('src' => 'pig.jpeg', 'alt' => 'pig say oink	'));
 echo $image;
 ?>

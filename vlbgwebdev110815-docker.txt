@@ -1,0 +1,21 @@
+Docker at Molindo
+
+Who to orchestrate Docker
+
+Problems
+ - parameterization (dev, staging, production)
+ - deployment: (upgrade/Rollback)
+ 	- Continous integration: Buildmachine makes build, tags, deploys and makes rollback if necessary
+ - Container Distribution
+ 	- System Managemd
+ - Service Discovery
+ 	- Security: Amazon encryption. Every Client can only login with its creditions
+ - Security
+
+Approaches
+ - ectd: auto healing cluster
+ - storage, logik, routing nodes
+ - cloudformation template
+ 	- one apt mirror per template
+ 	- bitbucket -> ci -> bamboo -> apt-images 
+ 		- buildtask -> pulls apt-images -> dockerimages

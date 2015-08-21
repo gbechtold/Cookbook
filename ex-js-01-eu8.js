@@ -83,18 +83,6 @@ print(totalloops);
 return(result);
 }
 
-
-
 print(findbiggestmultiple(basedata));
 
 
-//
-
-print(3*5*5*7*6*6*8*9*6*6*4*8*9);
-print(5*5*7*6*6*8*9*6*6*4*8*9*5);
-print(5*7*6*6*8*9*6*6*4*8*9*5);
-/* print(7668966489504);
-print(5576689664895);
-print(5766896648950);
-print(7668966489504);
-print(5576689664895);*/

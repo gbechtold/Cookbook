@@ -36,9 +36,44 @@
 <H1> Magazine JS </H1>
 
 <div id="MagazineContainer"> </div>
-<script id="yumpuMagazineScript" src="http://dev.yumpu.com/assets/v4/js/modules/toddycat/bin/YumpuMagazine.min.js" data-yumpu-magazine-id="20845397" data-yumpu-player-container="MagazineContainer"></script>
+<script id="yumpuMagazineScript" src="http://dev.yumpu.com/assets/v4/js/modules/toddycat/bin/YumpuMagazine.min.js" data-yumpu-magazine-id="20845397" data-yumpu-player-container="MagazineContainer">
 
+// var xy = new Yumpu();
+// xy.create_player("#CONTAINER","123345", { fallback_order:"js", current_language:""} );
 
+// fallback_order = ["html5","flash","js"] // so lautet der default: ["html5","flash","js"] ... wenn man "flash" weglässt, wird dieser auch nicht geladen
+// current_language = "domain" in Webkiosks - das Frontend erkennt, dass es sich um einen Webk. handelt und verwendet kein CORS
+// tNoResize = true; // flag needed with Bootstrap adaptions (responsive resizing) ... Verwendung mit Thomas
+// sharePopupGUIText = '<?= $this->lang->line('LNG_GUI_SOCIAL_SHARING'); ?>';
+// sharePopupTitleText = '<?= $this->lang->line('LNG_SHARE_POPUP_HEADLINE'); ?>';
+// sharePopupTeaserText = '<?= $this->lang->line('LNG_SHARE_POPUP_TEASER'); ?>';
+// sharePopupEmbedTeaserText = '<?= $this->lang->line('LNG_SHARE_POPUP_EMBED_TEASER'); ?>';
+// shareLocation = "?"; // Webkiosk URL
+// ypShareLocation = "?"; // Webkiosk ... ? this change was made for webkiosks, as they normally do NOT have httpS available, which is a must have for facebook to share as a "video"
+// aboteaser = '<?= $aboteaser; ?>';
+// aboteaserLink = '<?= $aboteaserLink; ?>';
+// aboteaserAction = '<?= $aboteaserAction; ?>';
+// adminCheck = false; // wird auf true gesetzt wenn sich ein Admin eingeloggt hat
+// firstLastPageButtonsOff = '1'
+// smallFSActive = false; // ist glaub auf true wenn das Mag in document/fullscreen/... dargestellt wird
+// autoflipPages = "1"
+// user_page = "<?= base_url('/user/'.strtolower($author)); ?>"; // MOBILE
+// create_date = "<?= $create_date; ?>"; // MOBILE
+// hideSearch = "1"/"0" // FLASH
+// hideTAF = "1"/"0" // FLASH
+// postpage // FLASH
+// prepage // FLASH
+// gui // FLASH
+// guiFullscreen // FLASH
+// guiFlipbuttons // FLASH
+// guiOverview // FLASH
+// guiZoom // FLASH
+// guiMute // FLASH
+// guiSinglepage // FLASH
+// guiOverlay // FLASH
+// withoutBranding // FLASH
+
+</script>
 
 <!--
 <H1> Bookshelf JS </H1>
@@ -46,8 +81,26 @@
 <script id="yumpuMagazineScript" src="http://dev.yumpu.com/assets/v4/js/modules/toddycat/bin/YumpuMagazine.min.js" data-yumpu-embed-id="mimE5EX021a2pQDR">
 myYumpu = new Yumpu();
 myYumpu.create_bookshelf( "BookshelfContainer", mimE5EX021a2pQDR, userID );
+
+// fullscreenLinkingActivated = "on"
+// isMobileDevice = true / false ... wird automatisch bestimmt
+// yumpu_bookshelf_section_titles_on = "on"
+// yumpu_bookshelf_target = "magazinePage"
+// yumpu_bookshelf_flip_btn_color = "light"
+// yumpu_bookshelf_flip_throught_sections = "on"
+// yumpu_bookshelf_align = "center"
+// yumpu_logo_on_or_off = "on"
+// title_font_color = "FFFFFF"
+// usedFontFamily = "Open Sans"
+// usedFontFamilyWebFontTitle = "Open+Sans::latin"
+// ydomain = "http(s)://www.domain.com/" (usually "http(s)://(local/dev/www).yumpu.com/")
+// yumpu_bookshelf_target_url = ydomain
+// embedded = false
+
+
 </script>
 -->
+
 
 </body>
 </html>

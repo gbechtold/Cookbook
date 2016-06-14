@@ -10,44 +10,23 @@ a + b + c = 1000
 There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product abc. */
 
-var $a = function() {
+/*  
 
-	var $a = 1;
-	var $b = 1;
-	var $c = 1;
-	var $max = 10;
-	var $countmax = 10;
+n + n+1 = n+2 
+1 + 2 = 3 = true && 1^1 + 2^2 = 3^3
+-> 1^1 + 2^2 = 3^3 -> sum = 1000
+ */
+ 
+var $counter = 0;
+while($counter<10) {
+	$counter++;
+	print($counter);
+}
+
+ 
 
 
-
-
-
-	for ($c; $max > $c; $c++) {
-			
-		 for ($b; $c > $b; $b++) {	
-									
-				for ($a; $b > $a; $a++) {
-				 
-			 	if ($a + $b + $c == $countmax) {print($a + " " + $b + " " + $c + " is the Countmax " + $countmax);}
-				
-				/*
-				if (($a * $a) + ($b * $b) == ($c * $c)) {
-				print('Current triplet ' + $a +' '+ $b +' ' + $c);
-				print('Product of triplet ' + ($a*$a) +' '+ ($b*$b) +' ' + ($c*$c) + ' = ' + (($a+$a)+($b*$b)+($c*$c)));
-				*/
-				
-				}
-			}
-		}
-		
-
-	/*
-	if (($a * $a) + ($b * $b) == ($c * $c)) {
-		print('Current triplet ' + $a +' '+ $b +' ' + $c);
-		}
-	*/	
-	}
-$a();
+print('hello world');
 
 
 

@@ -17,14 +17,48 @@ n + n+1 = n+2
 -> 1^1 + 2^2 = 3^3 -> sum = 1000
  */
  
-var $counter = 0;
-while($counter<10) {
-	$counter++;
-	print($counter);
+var $n = 1;
+
+while($n<1000) {
+
+		
+		$n + ($n+1) == $n+2;
+		print($n);
+		
+		print($n +" + "+ ($n+1) +" = "+ ($n+2));
+
+	
+		while(squarerootequation($n)){
+			
+			 while(SquareRootEquationsum($n, 1000)){
+			print(sqr($n) +" + "+ sqr(($n+1)) +" = "+ sqr(($n+2))); 
+			print('innersqr');	
+			}	
+			print('loop2');  
+		}
+
+		$n++;
+
 }
 
- 
 
+function sqr(x) {
+	return x*x;
+}
+ 
+function squarerootequation($n) {
+		if(sqr($n) + sqr($n+1) == sqr($n+2)) {
+			print(sqr($n) +" + "+ sqr(($n+1)) +" = "+ sqr(($n+2)))
+		}
+		else {
+			return false;
+			}
+} 
+
+function SquareRootEquationsum($n,$m) {
+		sqr($n) + sqr($n+1) + sqr($n+2) == $m;
+		return true;
+}
 
 print('hello world');
 

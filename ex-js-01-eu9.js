@@ -25,7 +25,7 @@ while($n<1000) {
 		$n + ($n+1) == $n+2;
 		print($n);
 		
-		print($n +" + "+ ($n+1) +" = "+ ($n+2));
+		print($n +" + "+ ($n+1) + ($n + $n+2)) +" = "+ ($n + $n+2));
 
 	
 		while(squarerootequation($n)){
